@@ -1,0 +1,15 @@
+.image-slider {
+  width: 160%; /* Ancho del componente ImageSlider */
+  max-width: 600px; /* Establece un ancho máximo para el slider */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+}
+
+.image-slider img {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+  height: auto;
+  transition: transform 1s ease-in-out;
+  object-fit: cover; /* Ajusta la forma en que la imagen se ajusta dentro del contenedor */
+}

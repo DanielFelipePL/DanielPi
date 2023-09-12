@@ -1,0 +1,70 @@
+
+.gameList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye el espacio entre las cartas */
+    height: 50vh;
+    margin-top: 25vh;
+    padding-left: 240px; /* Espacio vacío a la izquierda */
+    padding-right: 16px; /* Espacio vacío a la derecha */
+  }
+  /* Agrega este CSS a tu archivo Home.module.css o styles.css */
+
+.filterGender { 
+    left: 1%;  
+    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
+    position: fixed;
+    top: 3%;
+}
+.filterAZ { 
+    left: 1%;  
+    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
+    position: fixed;
+    top: 30%;
+}
+.filterAndSort{ 
+    left: 1%;  
+    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
+    position: fixed;
+    top: 20%;
+}
+ .pagination {
+  left: 1%; 
+  margin-right: 20px;
+  position: fixed;
+  color: #ffffff;
+ }
+
+/* Estilo para el selector de género */
+#genre {
+  width: 150px; /* Ancho del selector (ajusta según tus necesidades) */
+}
+
+.gameCard {
+    border-radius: 15px;
+    width: 383px; /* Ancho fijo de las cartas */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px entre las cartas */
+    background-color: #202020;
+  }
+  
+.img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    flex-grow: 1;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    flex-grow: 0;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+  }
+  p {
+    color: #ffffff;   
+  }

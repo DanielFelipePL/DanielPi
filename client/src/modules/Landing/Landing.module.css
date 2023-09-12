@@ -1,0 +1,65 @@
+/* Landing.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leftContent h1,
+.leftContent p {
+  color: #ffffff; /* Establece el color del texto a blanco */
+}
+.redText {
+  color: red;
+}
+.leftContent p.blueText {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+.leftContent {
+  width: 90%; /* Ancho para el contenido izquierdo */
+  text-align: right;
+  transform: translateX(-40%); /* Mueve el contenido hacia el borde izquierdo */
+}
+
+.rightContent {
+  width: 45%; /* Ancho para el contenido derecho */
+  text-align: left;
+  transform: translateX(10%); /* Mueve el contenido hacia el borde derecho */
+}
+
+/* Estilo para el título (h1) */
+.leftContent h1 {
+  margin: 10px 0; /* Agrega espacio vertical entre el título y los párrafos */
+  font-size: 60px; /* Aumenta el tamaño de la fuente del título */
+}
+
+
+
+/* Estilos para los párrafos (p) */
+.leftContent p {
+  margin: 10px 0; /* Agrega espacio vertical entre los párrafos */
+  font-size: 25px; /* Aumenta el tamaño de la fuente de los párrafos */
+}
+
+/* Estilo para el botón */
+.leftContent button {
+  background-color: #007bff; /* Cambia el color de fondo del botón */
+  color: white; /* Cambia el color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 10px 20px; /* Ajusta el espaciado del botón */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Agrega una transición de color de fondo */
+  font-size: 13px;
+}
+
+
+
+.leftContent button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón por encima */
+}
