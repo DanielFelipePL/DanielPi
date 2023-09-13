@@ -1,70 +1,166 @@
-
+/* Estilos para la lista de juegos */
 .gameList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribuye el espacio entre las cartas */
-    height: 50vh;
-    margin-top: 25vh;
-    padding-left: 240px; /* Espacio vacío a la izquierda */
-    padding-right: 16px; /* Espacio vacío a la derecha */
-  }
-  /* Agrega este CSS a tu archivo Home.module.css o styles.css */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 50vh;
+  margin-top: 25vh;
+  padding-left: 240px;
+  padding-right: 16px;
+}
 
-.filterGender { 
-    left: 1%;  
-    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
-    position: fixed;
-    top: 3%;
+/* Estilos para el filtro de género */
+.filterGender {
+  left: 1%;
+  margin-right: 4px;
+  position: fixed;
+  top: 40%;
+  color: #202020;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 230px;
 }
-.filterAZ { 
-    left: 1%;  
-    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
-    position: fixed;
-    top: 30%;
+
+/* Estilos para el filtro de orden alfabético */
+.filterAZ {
+  left: 1%;
+  margin-right: 4px;
+  position: fixed;
+  top: 60%;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 230px;
 }
-.filterAndSort{ 
-    left: 1%;  
-    margin-right: 4px; /* Ajusta el valor según tu preferencia para separar el filtro de los elementos de la lista */
-    position: fixed;
-    top: 20%;
+
+/* Estilos para el contenedor de filtros y orden */
+.filterAndSort {
+  left: 1%;
+  margin-right: 4px;
+  position: fixed;
+  top: 20%;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
- .pagination {
-  left: 1%; 
+
+/* Estilos para el selector de género */
+#genre {
+  width: 150px;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  left: 1%;
   margin-right: 20px;
   position: fixed;
   color: #ffffff;
- }
-
-/* Estilo para el selector de género */
-#genre {
-  width: 150px; /* Ancho del selector (ajusta según tus necesidades) */
+}
+.img {
+  max-width: 100%;
+  height: auto;
+  flex-grow: 1;
+}
+/* Estilos para las cartas de juego */
+.card {
+  border-radius: 6px;
+  width: 383px;
+  margin-bottom: 20px;
+  background: #191c29;
+  position: relative;
+ 
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  --card-height: 40vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
 }
 
-.gameCard {
-    border-radius: 15px;
-    width: 383px; /* Ancho fijo de las cartas */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    min-height: 20vh;
-    margin-bottom: 20px; /* Agrega un margen inferior de 20px entre las cartas */
-    background-color: #202020;
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
   }
-  
-.img {
-    border-radius: 15px;
-    max-width: 100%;
-    height: auto;
-    flex-grow: 1;
+  100% {
+    --rotate: 360deg;
   }
-  
-  h3 {
-    margin: 10px 0;
-    flex-grow: 0;
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 24px;
-  }
-  p {
-    color: #ffffff;   
-  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+/* Estilos para las imágenes de juego */
+
+
+/* Estilos para los encabezados */
+h3 {
+  margin: 10px 0;
+  flex-grow: 0;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 24px;
+}
+
+/* Estilos para los párrafos */
+p {
+  color: #ffffff;
+}
+
+/* Estilos para el selector múltiple de plataformas y géneros */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: black;
+}

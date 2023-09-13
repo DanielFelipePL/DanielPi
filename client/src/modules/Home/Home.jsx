@@ -112,7 +112,7 @@ function Home() {
 
         <div className={styles.gameList}>
           {filteredGames().map((game) => (
-            <div key={game.id} className={styles.gameCard}>
+            <div key={game.id} className={styles.card}>
               <Link to={`/detail/${game.id}`}>
                 <img src={game.image} alt={game.name} className={styles.img} />
                 <h3>{game.name}</h3>
